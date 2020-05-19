@@ -35,7 +35,7 @@ public class GrayscaleFilter implements Filter{
             }
 
             // write output
-            ImageIO.write(image, "jpg", outputFile);
+            ImageIO.write(image, outputFile.getName().substring(outputFile.getName().lastIndexOf(".")+1), outputFile);
 
         } catch (IOException e) {
             e.printStackTrace();

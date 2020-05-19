@@ -120,7 +120,7 @@ public class PhotoFilter extends JFrame {
         String outputFileName = srcFile.getAbsolutePath().substring(0, srcFile.getAbsolutePath().indexOf(".")) +
                                 "_" +
                                 filter.getName() +
-                                ".jpg";
+                                srcFile.getName().substring(srcFile.getName().lastIndexOf("."));
         outputFile = new File(outputFileName);
 
         // transform image with filter
